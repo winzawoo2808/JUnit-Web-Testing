@@ -24,6 +24,13 @@ public class CustomerController {
         return new ResponseEntity<>("Customer Creation Successful", HttpStatus.OK);
     }
 
+    @RequestMapping("/update")
+    public String update(@RequestBody Customer customer){
+        //service.save(customer);
+        //return new ResponseEntity<>("Customer Creation Successful", HttpStatus.OK);
+        return "Hello !!!";
+    }
+
     @RequestMapping("/delete/{id}")
     public ResponseEntity update(@PathVariable int id){
         service.delete(Long.valueOf(id));
